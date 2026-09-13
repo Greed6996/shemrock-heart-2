@@ -1,0 +1,6 @@
+{
+  "name": "Shemrock Hearts Playschool",
+  "description": "Where little beginnings become big possibilities. Shemrock Hearts Guwahati - 19+ years of joyful early childhood education, award-winning ShemEduMAX™ curriculum, and loving care.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
