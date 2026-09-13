@@ -66,66 +66,66 @@ export const Hero: React.FC<HeroProps> = ({ onOpenAdmission, onOpenVisit }) => {
   return (
     <section
       id="home"
-      className="relative overflow-hidden pt-3 pb-8 sm:pt-6 sm:pb-10 lg:pt-6 lg:pb-8 bg-gradient-to-b from-[#FFFDF8] via-[#FFF8EE] to-[#FFF4E5]"
+      className="relative overflow-hidden py-3 sm:py-4 lg:py-4 xl:py-7 bg-gradient-to-b from-[#FFFDF8] via-[#FFF8EE] to-[#FFF4E5]"
     >
       {/* Floating Whimsical Background Stars & Playful Toys */}
-      <div className="absolute top-4 left-6 text-2xl sm:text-3xl animate-float pointer-events-none select-none opacity-80" aria-hidden="true">
+      <div className="absolute top-3 left-6 text-xl sm:text-2xl animate-float pointer-events-none select-none opacity-80" aria-hidden="true">
         🎈
       </div>
-      <div className="absolute top-8 right-8 text-2xl sm:text-3xl animate-float-delayed pointer-events-none select-none opacity-80" aria-hidden="true">
+      <div className="absolute top-6 right-8 text-xl sm:text-2xl animate-float-delayed pointer-events-none select-none opacity-80" aria-hidden="true">
         🌈
       </div>
-      <div className="absolute bottom-6 left-8 text-2xl sm:text-3xl animate-wiggle pointer-events-none select-none opacity-75" aria-hidden="true">
+      <div className="absolute bottom-4 left-8 text-xl sm:text-2xl animate-wiggle pointer-events-none select-none opacity-75" aria-hidden="true">
         🧸
       </div>
 
       {/* Extra Whimsical Floating Stars as requested */}
-      <div className="absolute top-3 left-1/4 text-2xl animate-float pointer-events-none select-none opacity-75" aria-hidden="true" title="Twinkling star">
+      <div className="absolute top-2 left-1/4 text-xl animate-float pointer-events-none select-none opacity-75" aria-hidden="true" title="Twinkling star">
         ⭐
       </div>
-      <div className="absolute top-12 left-[18%] text-lg animate-gentle-pulse pointer-events-none select-none opacity-85" aria-hidden="true">
+      <div className="absolute top-8 left-[18%] text-base animate-gentle-pulse pointer-events-none select-none opacity-85" aria-hidden="true">
         ✨
       </div>
-      <div className="absolute top-6 right-1/3 text-2xl animate-float-delayed pointer-events-none select-none opacity-80" aria-hidden="true" title="Twinkling star">
+      <div className="absolute top-4 right-1/3 text-xl animate-float-delayed pointer-events-none select-none opacity-80" aria-hidden="true" title="Twinkling star">
         🌟
       </div>
-      <div className="absolute top-1/2 left-4 text-xl animate-float pointer-events-none select-none opacity-75" aria-hidden="true">
+      <div className="absolute top-1/2 left-4 text-lg animate-float pointer-events-none select-none opacity-75" aria-hidden="true">
         ⭐
       </div>
-      <div className="absolute top-2/3 left-1/3 text-lg animate-float-delayed pointer-events-none select-none opacity-80" aria-hidden="true">
+      <div className="absolute top-2/3 left-1/3 text-base animate-float-delayed pointer-events-none select-none opacity-80" aria-hidden="true">
         ✨
       </div>
-      <div className="absolute top-1/2 right-4 text-2xl sm:text-3xl animate-gentle-pulse pointer-events-none select-none opacity-85" aria-hidden="true" title="Twinkling star">
+      <div className="absolute top-1/2 right-4 text-xl sm:text-2xl animate-gentle-pulse pointer-events-none select-none opacity-85" aria-hidden="true" title="Twinkling star">
         ⭐
       </div>
-      <div className="absolute bottom-10 right-1/4 text-xl animate-float pointer-events-none select-none opacity-80" aria-hidden="true">
+      <div className="absolute bottom-8 right-1/4 text-lg animate-float pointer-events-none select-none opacity-80" aria-hidden="true">
         🌟
       </div>
-      <div className="absolute bottom-16 right-10 text-lg animate-float-delayed pointer-events-none select-none opacity-75" aria-hidden="true">
+      <div className="absolute bottom-12 right-10 text-base animate-float-delayed pointer-events-none select-none opacity-75" aria-hidden="true">
         ✨
       </div>
 
       {/* Soft color glow orbs */}
-      <div className="absolute -top-10 -left-10 w-60 h-60 bg-rose-200/30 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute top-1/3 -right-10 w-72 h-72 bg-amber-200/35 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute -top-10 -left-10 w-52 h-52 bg-rose-200/30 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-1/3 -right-10 w-60 h-60 bg-amber-200/35 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-6 items-center">
           
           {/* Left Column: Headline, Trust Pill & Interactive CTA Buttons */}
           <div className="lg:col-span-7 text-center lg:text-left">
             {/* Trust Pill */}
-            <div className="inline-flex items-center gap-2 bg-white/90 border border-amber-200/80 px-3 py-1 rounded-full shadow-xs mb-2.5 sm:mb-3">
+            <div className="inline-flex items-center gap-1.5 bg-white/90 border border-amber-200/80 px-2.5 py-0.5 sm:py-1 rounded-full shadow-xs mb-1.5 sm:mb-2">
               <span className="flex h-2 w-2 rounded-full bg-emerald-500 animate-ping" />
               <span className="text-[11px] sm:text-xs font-bold text-amber-900 flex items-center gap-1.5">
-                <Heart className="w-3.5 h-3.5 fill-rose-500 text-rose-500 inline" />
+                <Heart className="w-3 h-3 sm:w-3.5 sm:h-3.5 fill-rose-500 text-rose-500 inline" />
                 Guwahati's Beloved Playschool • 19 Years of Trust
               </span>
             </div>
 
             {/* Main Headline */}
             <h1
-              className="text-2xl sm:text-4xl lg:text-4.5xl xl:text-5xl font-black text-slate-900 tracking-tight leading-[1.12] mb-2.5 sm:mb-3"
+              className="text-2xl sm:text-3xl lg:text-3.5xl xl:text-4.5xl font-black text-slate-900 tracking-tight leading-[1.12] mb-1.5 sm:mb-2"
               style={{ fontFamily: 'Fredoka, cursive' }}
             >
               Where Little Beginnings <br className="hidden sm:inline" />
@@ -135,23 +135,23 @@ export const Hero: React.FC<HeroProps> = ({ onOpenAdmission, onOpenVisit }) => {
             </h1>
 
             {/* Subtitle */}
-            <p className="text-xs sm:text-sm lg:text-base text-slate-600 font-medium max-w-xl mx-auto lg:mx-0 mb-4 sm:mb-5 leading-relaxed">
+            <p className="text-xs sm:text-sm lg:text-xs xl:text-sm text-slate-600 font-medium max-w-xl mx-auto lg:mx-0 mb-3 sm:mb-3.5 leading-relaxed">
               Welcome to <strong className="text-slate-800">Shemrock Hearts Guwahati</strong>. For 19 years, we’ve nurtured toddlers with love, laughter, and lifelong foundational growth through the award-winning <strong className="text-rose-600 font-bold">ShemEduMAX™</strong> play-based curriculum.
             </p>
 
             {/* Primary Action Buttons with Playful Hover Bounce/Pop Animations */}
-            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 sm:gap-4 mb-4 sm:mb-5">
+            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-2.5 sm:gap-3 mb-3 sm:mb-3.5">
               <button
                 onClick={() => {
                   playChimeSound();
                   onOpenVisit();
                 }}
-                className="btn-playful-bounce w-full sm:w-auto px-6 sm:px-7 py-3 sm:py-3.5 rounded-2xl bg-gradient-to-r from-rose-500 via-rose-600 to-pink-600 text-white font-extrabold text-sm sm:text-base shadow-md shadow-rose-500/30 hover:shadow-xl hover:shadow-rose-500/40 active:scale-95 cursor-pointer flex items-center justify-center gap-2 group border border-rose-400/30"
+                className="btn-playful-bounce w-full sm:w-auto px-5 sm:px-6 py-2.5 sm:py-3 rounded-xl bg-gradient-to-r from-rose-500 via-rose-600 to-pink-600 text-white font-extrabold text-xs sm:text-sm shadow-md shadow-rose-500/30 hover:shadow-xl hover:shadow-rose-500/40 active:scale-95 cursor-pointer flex items-center justify-center gap-2 group border border-rose-400/30"
                 id="hero-book-visit-btn"
               >
-                <Calendar className="w-4 h-4 sm:w-5 sm:h-5 text-amber-200 group-hover:rotate-12 group-hover:scale-110 transition-transform duration-300" />
+                <Calendar className="w-4 h-4 text-amber-200 group-hover:rotate-12 group-hover:scale-110 transition-transform duration-300" />
                 <span>Book a School Visit</span>
-                <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 ml-0.5 group-hover:translate-x-1.5 transition-transform duration-300" />
+                <ArrowRight className="w-3.5 h-3.5 ml-0.5 group-hover:translate-x-1.5 transition-transform duration-300" />
               </button>
 
               <button
@@ -159,16 +159,16 @@ export const Hero: React.FC<HeroProps> = ({ onOpenAdmission, onOpenVisit }) => {
                   playPopSound();
                   onOpenAdmission();
                 }}
-                className="btn-playful-bounce w-full sm:w-auto px-6 sm:px-7 py-3 sm:py-3.5 rounded-2xl bg-white hover:bg-amber-50/90 text-slate-800 font-extrabold text-sm sm:text-base border-2 border-amber-300 hover:border-amber-400 shadow-sm hover:shadow-lg hover:shadow-amber-400/20 active:scale-95 cursor-pointer flex items-center justify-center gap-2 group"
+                className="btn-playful-bounce w-full sm:w-auto px-5 sm:px-6 py-2.5 sm:py-3 rounded-xl bg-white hover:bg-amber-50/90 text-slate-800 font-extrabold text-xs sm:text-sm border-2 border-amber-300 hover:border-amber-400 shadow-sm hover:shadow-lg hover:shadow-amber-400/20 active:scale-95 cursor-pointer flex items-center justify-center gap-2 group"
                 id="hero-enquire-admission-btn"
               >
-                <Sparkles className="w-4 h-4 sm:w-5 sm:h-5 text-amber-500 group-hover:rotate-45 group-hover:scale-125 transition-transform duration-300" />
+                <Sparkles className="w-4 h-4 text-amber-500 group-hover:rotate-45 group-hover:scale-125 transition-transform duration-300" />
                 <span>Enquire for Admission</span>
               </button>
             </div>
 
             {/* Key Assurance Badges */}
-            <div className="grid grid-cols-3 gap-2 max-w-lg mx-auto lg:mx-0 pt-2 border-t border-amber-200/60 text-slate-700">
+            <div className="grid grid-cols-3 gap-2 max-w-lg mx-auto lg:mx-0 pt-1.5 border-t border-amber-200/60 text-slate-700">
               <div className="flex items-center gap-1.5 text-[11px] sm:text-xs font-bold">
                 <CheckCircle className="w-3.5 h-3.5 text-emerald-500 shrink-0" />
                 <span>100% CCTV Safety</span>
@@ -189,10 +189,10 @@ export const Hero: React.FC<HeroProps> = ({ onOpenAdmission, onOpenVisit }) => {
             <div className="relative mx-auto max-w-md lg:max-w-none">
               
               {/* Outer Decorative Frame */}
-              <div className="relative rounded-3xl p-2.5 sm:p-3 bg-white shadow-xl shadow-amber-900/10 border-3 border-amber-200">
+              <div className="relative rounded-2xl p-2 sm:p-2.5 bg-white shadow-xl shadow-amber-900/10 border-2 sm:border-3 border-amber-200">
                 
                 {/* Continuous Slideshow Screen (Pure Auto Moving) */}
-                <div className="relative overflow-hidden rounded-2xl aspect-[16/11] sm:aspect-[4/3] max-h-[250px] sm:max-h-[300px] lg:max-h-[330px] bg-amber-100">
+                <div className="relative overflow-hidden rounded-xl aspect-[16/10] sm:aspect-[4/3] max-h-[220px] sm:max-h-[250px] lg:max-h-[260px] xl:max-h-[310px] bg-amber-100">
                   
                   {/* Moving Slides */}
                   {HERO_SLIDES.map((slide, idx) => (
@@ -213,12 +213,12 @@ export const Hero: React.FC<HeroProps> = ({ onOpenAdmission, onOpenVisit }) => {
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/15 to-transparent pointer-events-none" />
 
                       {/* Real Life Badge on Image */}
-                      <div className="absolute bottom-2.5 left-3 right-3 flex items-center justify-between text-white text-[11px] font-bold">
-                        <span className="bg-black/60 backdrop-blur-xs px-2.5 py-1 rounded-full flex items-center gap-1.5">
-                          <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-                          <span className="truncate max-w-[190px] sm:max-w-none">{slide.title}</span>
+                      <div className="absolute bottom-2 left-2.5 right-2.5 flex items-center justify-between text-white text-[11px] font-bold">
+                        <span className="bg-black/60 backdrop-blur-xs px-2 py-0.5 rounded-full flex items-center gap-1.5">
+                          <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                          <span className="truncate max-w-[170px] sm:max-w-none">{slide.title}</span>
                         </span>
-                        <span className="bg-rose-600/90 px-2 py-1 rounded-full text-[10px] shrink-0 font-extrabold">
+                        <span className="bg-rose-600/90 px-2 py-0.5 rounded-full text-[10px] shrink-0 font-extrabold">
                           {slide.tag}
                         </span>
                       </div>
@@ -226,7 +226,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenAdmission, onOpenVisit }) => {
                   ))}
 
                   {/* Top Continuous Real Life Tag */}
-                  <div className="absolute top-2.5 left-2.5 z-20 flex items-center gap-1.5 bg-black/50 backdrop-blur-xs text-white px-2.5 py-0.5 rounded-full text-[10px] font-bold pointer-events-none">
+                  <div className="absolute top-2 left-2 z-20 flex items-center gap-1.5 bg-black/50 backdrop-blur-xs text-white px-2 py-0.5 rounded-full text-[10px] font-bold pointer-events-none">
                     <span className="w-1.5 h-1.5 rounded-full bg-amber-400 animate-ping" />
                     <span>Real Shemrock Guwahati Life</span>
                   </div>
@@ -234,15 +234,15 @@ export const Hero: React.FC<HeroProps> = ({ onOpenAdmission, onOpenVisit }) => {
                 </div>
 
                 {/* Subtle Moving Indicator Line */}
-                <div className="flex items-center justify-between pt-2 px-1">
+                <div className="flex items-center justify-between pt-1.5 px-1">
                   <div className="flex items-center gap-1.5">
                     {HERO_SLIDES.map((_, dotIdx) => (
                       <div
                         key={dotIdx}
                         className={`h-1.5 rounded-full transition-all duration-500 ${
                           dotIdx === currentIdx
-                            ? 'w-6 bg-gradient-to-r from-rose-500 to-amber-500'
-                            : 'w-2 bg-slate-200'
+                            ? 'w-5 bg-gradient-to-r from-rose-500 to-amber-500'
+                            : 'w-1.5 bg-slate-200'
                         }`}
                       />
                     ))}
@@ -256,24 +256,24 @@ export const Hero: React.FC<HeroProps> = ({ onOpenAdmission, onOpenVisit }) => {
               </div>
 
               {/* Floating Child Joy Badge */}
-              <div className="hidden sm:flex absolute -top-4 -right-3 bg-white p-2.5 rounded-xl shadow-lg border border-rose-200 items-center gap-2 animate-float pointer-events-none">
-                <div className="w-8 h-8 rounded-lg bg-gradient-to-tr from-rose-500 to-amber-400 flex items-center justify-center text-white text-base">
+              <div className="hidden xl:flex absolute -top-3 -right-2 bg-white p-2 rounded-xl shadow-lg border border-rose-200 items-center gap-2 animate-float pointer-events-none">
+                <div className="w-7 h-7 rounded-lg bg-gradient-to-tr from-rose-500 to-amber-400 flex items-center justify-center text-white text-xs">
                   ❤️
                 </div>
                 <div>
-                  <div className="text-[10px] font-black text-rose-600 uppercase">19+ Years</div>
-                  <div className="text-xs font-extrabold text-slate-800">4,500+ Little Hearts</div>
+                  <div className="text-[9px] font-black text-rose-600 uppercase">19+ Years</div>
+                  <div className="text-[11px] font-extrabold text-slate-800">4,500+ Little Hearts</div>
                 </div>
               </div>
 
               {/* Floating Parent Rating Badge */}
-              <div className="hidden sm:flex absolute -bottom-4 -left-3 bg-white p-2 rounded-xl shadow-lg border border-amber-200 items-center gap-2 animate-float-delayed pointer-events-none">
-                <div className="w-8 h-8 rounded-lg bg-amber-100 flex items-center justify-center text-amber-600 font-black text-xs">
+              <div className="hidden xl:flex absolute -bottom-3 -left-2 bg-white p-1.5 px-2 rounded-xl shadow-lg border border-amber-200 items-center gap-2 animate-float-delayed pointer-events-none">
+                <div className="w-7 h-7 rounded-lg bg-amber-100 flex items-center justify-center text-amber-600 font-black text-[10px]">
                   ⭐ 5.0
                 </div>
                 <div>
-                  <div className="text-[10px] text-amber-500 font-black">★★★★★</div>
-                  <div className="text-[11px] font-bold text-slate-800">Guwahati's Choice</div>
+                  <div className="text-[9px] text-amber-500 font-black">★★★★★</div>
+                  <div className="text-[10px] font-bold text-slate-800">Guwahati's Choice</div>
                 </div>
               </div>
 
