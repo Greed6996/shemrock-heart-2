@@ -1,106 +1,84 @@
 import React from 'react';
-import { Award, BookOpen, Sparkles, Brain, Cpu, Users, Layers, Check } from 'lucide-react';
+import { Award, Check } from 'lucide-react';
 import { playPopSound } from '../utils/soundEffects';
 
 export const CurriculumEduMax: React.FC = () => {
   const pillars = [
     {
-      title: 'Scientific Early Brain Stimulation',
-      desc: 'Based on neuro-cognitive milestones tailored for ages 1.5 to 5.5 to spark synaptogenesis through multi-sensory tools.',
+      title: 'Brain Stimulation',
+      desc: 'Age-appropriate neuro-cognitive activities sparking curiosity.',
       icon: '🧠',
-      tag: 'Brain Science',
     },
     {
-      title: 'Montessori & Playway Blend',
-      desc: 'Self-correcting hands-on didactic apparatus combined with spontaneous joy, music, and social pretend play.',
+      title: 'Montessori & Playway',
+      desc: 'Hands-on sensory apparatus combined with joyful discovery.',
       icon: '🧩',
-      tag: 'Hands-On',
     },
     {
-      title: 'Phonics & Thematic Vocabulary',
-      desc: 'Structured synthetic phonics with multisensory actions, rhymes, and flash stories ensuring English fluency effortlessly.',
+      title: 'Phonics & Speech',
+      desc: 'Synthetic phonics and rhymes ensuring natural bilingual fluency.',
       icon: '🔤',
-      tag: 'Language Power',
     },
     {
-      title: 'Parent Collaboration (PPP)',
-      desc: 'Parent Participation Programme with real-time portfolio updates, workshop sessions, and shared home activities.',
+      title: 'Parent Partnership',
+      desc: 'Regular updates, portfolio reviews, and collaborative guidance.',
       icon: '🤝',
-      tag: 'Family Centred',
     },
   ];
 
   return (
-    <section className="py-16 sm:py-24 bg-gradient-to-br from-amber-500/10 via-rose-500/5 to-sky-500/10 relative overflow-hidden border-y border-amber-200/60">
+    <section id="curriculum" className="py-10 sm:py-14 bg-gradient-to-br from-amber-500/10 via-rose-500/5 to-sky-500/10 relative overflow-hidden border-y border-amber-200/60">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
         
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           
           {/* Left Column */}
-          <div className="lg:col-span-6 text-center lg:text-left">
-            <div className="inline-flex items-center gap-2 bg-amber-100 border border-amber-300/80 text-amber-950 px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-bold mb-4">
-              <Award className="w-4 h-4 text-amber-600" />
-              <span>Proprietary Educational System</span>
+          <div className="lg:col-span-5 text-center lg:text-left">
+            <div className="inline-flex items-center gap-1.5 bg-amber-100 border border-amber-300/80 text-amber-950 px-3 py-1 rounded-full text-xs font-bold mb-3">
+              <Award className="w-3.5 h-3.5 text-amber-600" />
+              <span>Proprietary System</span>
             </div>
 
             <h2
-              className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight mb-4"
+              className="text-2xl sm:text-3xl lg:text-4xl font-black text-slate-900 tracking-tight mb-2"
               style={{ fontFamily: 'Fredoka, cursive' }}
             >
-              ShemEduMAX™ <br />
-              <span className="text-rose-600">The Award-Winning Curriculum</span>
+              ShemEduMAX™ <span className="text-rose-600">Curriculum</span>
             </h2>
 
-            <p className="text-base text-slate-700 font-medium leading-relaxed mb-6">
-              Unlike ordinary nursery schools that rely on rote drills, Shemrock revolutionized early childhood education in India by creating <strong>ShemEduMAX™</strong>—a child-centric curriculum blending play with purpose.
+            <p className="text-xs sm:text-sm text-slate-700 font-medium leading-relaxed mb-4">
+              A research-backed blend of play and purposeful learning developed by educationists Dr. D.R. Arora & Dr. (Mrs.) Bimla Arora.
             </p>
 
-            <div className="space-y-3 mb-8 text-left">
+            <div className="space-y-2 mb-4 text-left">
               {[
-                'Proven across 650+ schools and 4,50,000+ happy alumni',
-                'Featured in Limca Book of Records for fastest preschool growth',
-                'Developed by leading academicians Dr. D.R. Arora & Dr. (Mrs.) Bimla Arora',
-                'Prepares children seamlessly for premier CBSE & ICSE formal schools in Guwahati',
+                'Proven across 650+ schools & 4.5 Lakh+ happy alumni',
+                'Featured in Limca Book of Records',
+                'Prepares children for premier formal schools in Guwahati',
               ].map((item, i) => (
-                <div key={i} className="flex items-center gap-3 bg-white/80 p-3 rounded-xl border border-amber-200/80 shadow-xs">
-                  <div className="w-6 h-6 rounded-full bg-emerald-100 flex items-center justify-center shrink-0">
-                    <Check className="w-3.5 h-3.5 text-emerald-600 font-black" />
-                  </div>
-                  <span className="text-xs sm:text-sm font-bold text-slate-800">{item}</span>
+                <div key={i} className="flex items-center gap-2 bg-white/80 p-2.5 rounded-xl border border-amber-200/80 text-xs font-bold text-slate-800">
+                  <Check className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                  <span>{item}</span>
                 </div>
               ))}
             </div>
-
-            <div className="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-2xl border border-amber-300 text-xs font-black text-amber-900 shadow-sm">
-              <span>🏆 100+ Years Combined Educational Legacy</span>
-            </div>
           </div>
 
-          {/* Right Column: 4 Educational Pillars */}
-          <div className="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+          {/* Right Column: 4 Pillars */}
+          <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-3.5">
             {pillars.map((item, idx) => (
               <div
                 key={idx}
                 onClick={() => playPopSound()}
-                className="bg-white rounded-3xl p-6 border-2 border-slate-100 hover:border-amber-400 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between"
+                className="bg-white rounded-2xl p-4 sm:p-5 border-2 border-slate-100 hover:border-amber-300 shadow-xs hover:shadow-md transition-all cursor-pointer"
               >
-                <div>
-                  <div className="flex items-center justify-between mb-3">
-                    <span className="text-3xl">{item.icon}</span>
-                    <span className="text-[10px] font-black uppercase tracking-wider bg-rose-50 text-rose-700 px-2 py-0.5 rounded-full border border-rose-200">
-                      {item.tag}
-                    </span>
-                  </div>
-                  <h3 className="text-base sm:text-lg font-black text-slate-900 mb-2" style={{ fontFamily: 'Fredoka, cursive' }}>
-                    {item.title}
-                  </h3>
-                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                    {item.desc}
-                  </p>
-                </div>
-                <div className="mt-4 pt-3 border-t border-slate-100 text-[11px] font-bold text-amber-600 flex items-center gap-1">
-                  <span>Child-Friendly Delivery</span>
-                </div>
+                <div className="text-2xl mb-2">{item.icon}</div>
+                <h3 className="text-base font-black text-slate-900 mb-1" style={{ fontFamily: 'Fredoka, cursive' }}>
+                  {item.title}
+                </h3>
+                <p className="text-xs text-slate-600 leading-relaxed">
+                  {item.desc}
+                </p>
               </div>
             ))}
           </div>

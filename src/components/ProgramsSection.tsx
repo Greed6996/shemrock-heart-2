@@ -1,41 +1,40 @@
 import React, { useState } from 'react';
-import { Sparkles, Users, Clock, CheckCircle2, ArrowRight, BookOpen, GraduationCap, Baby, HeartHandshake } from 'lucide-react';
+import { Users, Clock, CheckCircle2, Calendar, BookOpen } from 'lucide-react';
 import { PROGRAMS_DATA } from '../data/schoolData';
 import { playPopSound, playChimeSound } from '../utils/soundEffects';
 
 interface Props {
-  onOpenAdmission: (programName?: string) => void;
   onOpenVisit: () => void;
 }
 
-export const ProgramsSection: React.FC<Props> = ({ onOpenAdmission, onOpenVisit }) => {
+export const ProgramsSection: React.FC<Props> = ({ onOpenVisit }) => {
   const [activeProgramId, setActiveProgramId] = useState<string>('toddlers');
 
   return (
-    <section id="programs" className="py-16 sm:py-24 bg-[#FCFBF7] relative">
+    <section id="programs" className="py-10 sm:py-16 bg-[#FCFBF7] relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
-          <div className="inline-flex items-center gap-2 bg-rose-100 text-rose-800 px-4 py-1.5 rounded-full text-xs sm:text-sm font-bold mb-4 shadow-xs">
-            <GraduationCap className="w-4 h-4 text-rose-600" />
-            <span>Age-Appropriate Stages of Joy</span>
+        <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-10">
+          <div className="inline-flex items-center gap-1.5 bg-rose-100 text-rose-800 px-3.5 py-1 rounded-full text-xs font-bold mb-3 shadow-xs">
+            <BookOpen className="w-3.5 h-3.5 text-rose-600" />
+            <span>Early Learning Programs</span>
           </div>
 
           <h2
-            className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight mb-4"
+            className="text-2xl sm:text-3xl lg:text-4xl font-black text-slate-900 tracking-tight mb-2"
             style={{ fontFamily: 'Fredoka, cursive' }}
           >
-            Programs Tailored for <span className="text-rose-600">Every Tiny Step</span>
+            Programs Tailored for <span className="text-rose-600">Every Child</span>
           </h2>
 
-          <p className="text-base sm:text-lg text-slate-600 font-medium">
-            Every age group has unique emotional, motor, and cognitive requirements. Our curriculum gently builds upon the prior stage for effortless readiness.
+          <p className="text-xs sm:text-sm text-slate-600 font-medium">
+            Age-appropriate, joyful learning tailored for emotional, physical, and cognitive growth.
           </p>
         </div>
 
         {/* Tab Selection */}
-        <div className="flex items-center justify-center gap-2 sm:gap-3 flex-wrap mb-10">
+        <div className="flex items-center justify-center gap-2 flex-wrap mb-8">
           {PROGRAMS_DATA.map((prog) => (
             <button
               key={prog.id}
@@ -43,14 +42,14 @@ export const ProgramsSection: React.FC<Props> = ({ onOpenAdmission, onOpenVisit 
                 playPopSound();
                 setActiveProgramId(prog.id);
               }}
-              className={`px-4 sm:px-6 py-2.5 sm:py-3 rounded-2xl text-xs sm:text-sm font-extrabold transition-all cursor-pointer flex items-center gap-2 ${
+              className={`px-3.5 sm:px-4 py-2 rounded-xl text-xs sm:text-sm font-extrabold transition-all cursor-pointer flex items-center gap-1.5 ${
                 activeProgramId === prog.id
-                  ? 'bg-rose-600 text-white shadow-lg shadow-rose-600/25 scale-105'
+                  ? 'bg-rose-600 text-white shadow-md scale-105'
                   : 'bg-white hover:bg-amber-50 text-slate-700 border border-slate-200'
               }`}
             >
               <span>{prog.title}</span>
-              <span className={`text-[10px] px-2 py-0.5 rounded-full ${
+              <span className={`text-[10px] px-1.5 py-0.2 rounded-full ${
                 activeProgramId === prog.id ? 'bg-white/20 text-white' : 'bg-slate-100 text-slate-600'
               }`}>
                 {prog.age}
@@ -60,20 +59,20 @@ export const ProgramsSection: React.FC<Props> = ({ onOpenAdmission, onOpenVisit 
         </div>
 
         {/* Program Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {PROGRAMS_DATA.map((program) => {
             const isSelected = program.id === activeProgramId;
             return (
               <div
                 key={program.id}
-                className={`rounded-3xl bg-white border-2 transition-all duration-300 flex flex-col justify-between overflow-hidden shadow-md hover:shadow-xl ${
+                className={`rounded-2xl bg-white border-2 transition-all duration-200 flex flex-col justify-between overflow-hidden shadow-sm hover:shadow-md ${
                   isSelected
-                    ? 'border-rose-500 ring-4 ring-rose-500/10 -translate-y-1'
+                    ? 'border-rose-500 ring-2 ring-rose-500/20'
                     : 'border-slate-200 hover:border-amber-300'
                 }`}
               >
                 {/* Image Header */}
-                <div className="relative h-48 sm:h-52 overflow-hidden">
+                <div className="relative h-40 sm:h-44 overflow-hidden">
                   <img
                     src={program.image}
                     alt={program.title}
@@ -81,45 +80,44 @@ export const ProgramsSection: React.FC<Props> = ({ onOpenAdmission, onOpenVisit 
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                   
-                  {/* Age Tag */}
-                  <div className="absolute top-3 left-3 bg-white/95 backdrop-blur-xs px-3 py-1 rounded-full text-xs font-black text-rose-600 shadow-sm">
+                  <div className="absolute top-2.5 left-2.5 bg-white/95 backdrop-blur-xs px-2.5 py-0.5 rounded-full text-[11px] font-black text-rose-600 shadow-xs">
                     Age: {program.age}
                   </div>
 
-                  <div className="absolute bottom-3 left-3 right-3 text-white">
-                    <h3 className="text-xl font-black tracking-tight" style={{ fontFamily: 'Fredoka, cursive' }}>
+                  <div className="absolute bottom-2.5 left-3 right-3 text-white">
+                    <h3 className="text-lg font-black tracking-tight" style={{ fontFamily: 'Fredoka, cursive' }}>
                       {program.title}
                     </h3>
                   </div>
                 </div>
 
                 {/* Content */}
-                <div className="p-6 flex-1 flex flex-col justify-between">
+                <div className="p-4 sm:p-5 flex-1 flex flex-col justify-between">
                   <div>
                     {/* Meta info strip */}
-                    <div className="grid grid-cols-2 gap-2 mb-4 bg-slate-50 p-2.5 rounded-xl border border-slate-100 text-xs">
-                      <div className="flex items-center gap-1.5 text-slate-600">
-                        <Clock className="w-3.5 h-3.5 text-rose-500 shrink-0" />
+                    <div className="grid grid-cols-2 gap-2 mb-3 bg-slate-50 p-2 rounded-lg border border-slate-100 text-[11px]">
+                      <div className="flex items-center gap-1 text-slate-600 truncate">
+                        <Clock className="w-3 h-3 text-rose-500 shrink-0" />
                         <span className="truncate">{program.timing}</span>
                       </div>
-                      <div className="flex items-center gap-1.5 text-slate-600">
-                        <Users className="w-3.5 h-3.5 text-emerald-500 shrink-0" />
+                      <div className="flex items-center gap-1 text-slate-600 truncate">
+                        <Users className="w-3 h-3 text-emerald-500 shrink-0" />
                         <span className="truncate">{program.ratio}</span>
                       </div>
                     </div>
 
-                    <p className="text-xs sm:text-sm font-bold text-rose-700 mb-2">
+                    <p className="text-xs font-bold text-rose-700 mb-1.5">
                       {program.tagline}
                     </p>
 
-                    <p className="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">
+                    <p className="text-xs text-slate-600 leading-relaxed mb-3">
                       {program.description}
                     </p>
 
                     {/* Highlights */}
-                    <div className="space-y-2 mb-6">
-                      {program.highlights.map((item, idx) => (
-                        <div key={idx} className="flex items-start gap-2 text-xs text-slate-700">
+                    <div className="space-y-1 mb-4">
+                      {program.highlights.slice(0, 3).map((item, idx) => (
+                        <div key={idx} className="flex items-start gap-1.5 text-[11px] text-slate-700">
                           <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500 shrink-0 mt-0.5" />
                           <span>{item}</span>
                         </div>
@@ -127,27 +125,17 @@ export const ProgramsSection: React.FC<Props> = ({ onOpenAdmission, onOpenVisit 
                     </div>
                   </div>
 
-                  {/* Actions */}
-                  <div className="pt-4 border-t border-slate-100 flex items-center gap-2">
+                  {/* Actions - Clean "Book a Visit" (Enquire button removed) */}
+                  <div className="pt-3 border-t border-slate-100">
                     <button
                       onClick={() => {
                         playChimeSound();
-                        onOpenAdmission(program.title);
-                      }}
-                      className="flex-1 py-2.5 px-4 bg-rose-600 hover:bg-rose-700 text-white rounded-xl text-xs sm:text-sm font-extrabold shadow-sm transition active:scale-95 cursor-pointer text-center"
-                    >
-                      Enquire for {program.title.split(' ')[0]}
-                    </button>
-                    
-                    <button
-                      onClick={() => {
-                        playPopSound();
                         onOpenVisit();
                       }}
-                      className="p-2.5 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-xl transition cursor-pointer"
-                      title="Book Visit"
+                      className="w-full py-2 px-3 bg-rose-600 hover:bg-rose-700 text-white rounded-xl text-xs font-extrabold shadow-xs transition active:scale-95 cursor-pointer flex items-center justify-center gap-1.5"
                     >
-                      <ArrowRight className="w-4 h-4" />
+                      <Calendar className="w-3.5 h-3.5" />
+                      <span>Book a Visit for This Class</span>
                     </button>
                   </div>
                 </div>
